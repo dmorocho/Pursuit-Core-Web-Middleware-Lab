@@ -36,6 +36,7 @@ const generateSpread =(req,res, next)=>{
     for (let i = req.query.floor; i <= req.query.ceil; i++ ) spread.push(i)
     // res.range = range
 //    let randPick = Math.floor(Math.random()*req.query.ceil+req.query.floor)
+    res.mySpread = spread
    res.randNum = spread[Math.floor(Math.random()*spread.length)]
    next()
 }
@@ -43,11 +44,13 @@ const generateSpread =(req,res, next)=>{
 app.get('/random',generateSpread,(req,res)=>{
     res.json({status:"success",
                 range:[req.query.floor, req.query.ceil],
-             randPick:res.randNum
+                mySpread: res.mySpread,
+                randPick:res.randNum
             })
 })
 
 let people =["Doug","Kong", "Corey", "John", "Jyn"]
+
 const handleQueue =(req,res,next)=>{
     if(req.params.parameter === "peek"){
         res.json({status:"success",

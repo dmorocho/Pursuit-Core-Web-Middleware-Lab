@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <Div id="problemSet1">
+    <div id="problemSet1">
         <h3>Animals</h3>
         <form>
             <p>Test to see if you animal is in the list</p>
@@ -20,8 +20,8 @@
         <div id="responseSet1">
         </div>
 
-    </Div>
-    <Div id="problemSet2">
+    </div>
+    <div id="problemSet2">
             <h3>Random Number Picker</h3>
             <form id="randForm" >
             <p>Pick Two numbers, and get and random number</p>
@@ -32,19 +32,24 @@
             <div id="responseSet2">
 
             </div>
-     </Div>
+     </div>
     
-     <Div id="problemSet3">
+     <div id="problemSet3">
             <h3>People</h3>
+            <p>What would you like to do to the people list</p>
             
-            <form>
-                <input type="text" id="name" placeholder="Enter Name to be enqueued">
-                <input type="button" value="enqueued">
-                <button>dequeued</button>
-                <button>peek</button>
-            </form>
+            <select id="peopleSelect">
+                <option value="select one" disabled selected>select one</option>
+                <option id="enqueued" value="enqueued">enqueued</option>
+                <option id="dequeued" value="dequeued">dequeued</option>
+                <option id="peek" value="peek">peek</option>
+            </select>
+            <input type="text" id="name" placeholder="Enter Name to be enqueued">
+            <button type="submit" id="peopleBtn">submit</button>
     
-    </Div>
-    
+    </div>
+    <div>
+
+    </div>
 </body>
 </html>
